@@ -1,0 +1,53 @@
+<div style="padding:10px">
+
+    {% for company in companies %}
+        <div class="company-list-item" data-id="{{ company.id }}">
+            <h5>{{ company.name }}</h5>
+            {% for address in company.address_set.all %}
+                <address data-latitude="{{ address.latitude|stringformat:"f" }}" data-longitude="{{ address.longitude|stringformat:"f" }}">
+                    <p>
+                        {% if address.postIndex %}{{ address.postIndex }},{% endif %}
+                        {% if address.city %}{{ address.city }},{% endif %}
+                        {% if address.area %}{{ address.area }},{% endif %}
+                        {% if address.street %}{{ address.street }},{% endif %}
+                        {% if address.building %}{{ address.building }},{% endif %}
+                        {% if address.corpus %}{{ address.corpus }},{% endif %}
+                        {% if address.flat %}{{ address.flat }},{% endif %}
+
+                        <a href="#" class="show-map">Показать на карте</a>
+                        <a href="#" class="hide-map">Скрыть карту</a>
+                    </p>
+
+                    <p>{{ address.phone }}, <a href="{{ address.website }}">{{ address.website }}</a></p>
+
+                    <div class="map-place"></div>
+                </address>
+
+                <p>Рубрики:
+                    {% for category in company.categories.all %}
+                        <span>{{ category.name }}</span>
+                    {% endfor %}
+                </p>
+
+                <a href="#" onclick="showWindow({{ company.id }})" >Править <input type="hidden" value="{{ company.id }}"/> </a>
+
+                <hr/>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <p class="paging-bar">
+        {% for page_anchor in page_anchors %}
+            {% if page_anchor == '...' %}
+                {{ page_anchor }}
+
+            {% elif page_anchor == page %}
+                <a class="selected">{{ page_anchor }}</a>
+            {% else %}
+                <a href="/company/?p={{ page_anchor }}">{{ page_anchor }}</a>
+            {% endif %}
+
+        {% endfor %}
+    </p>
+
+</div>

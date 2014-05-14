@@ -1,0 +1,81 @@
+.category-container {
+    border: 1px solid #BCD0D5;
+    border-radius: 3px;
+    padding: 10px 0 0 10px;
+    min-height: 32px;
+
+    margin-bottom: 20px;
+}
+
+ul.tagger {
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px dashed #bcd0d5;
+    margin-bottom: 9px;
+}
+
+ul.tagger:last-child {
+    border: none;
+    margin-bottom: 0;
+}
+
+ul.tagger>li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding-left: 11px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: 2px;
+    color: #688617;
+    background-color: #edf2d4;
+    border: 1px solid #99c220;
+    border-top-color: #a3ca26;
+    border-bottom-color: #8cb919;
+}
+
+ul.tagger>li.node {
+    color: #2067B0;
+    background-color: #E6F0F5;
+    border: 1px solid #7CBAD5;
+    border-top-color: #89C4DD;
+    border-bottom-color: #6AAAC8;
+}
+
+ul.tagger>li>span {
+    margin-right: 10px;
+}
+
+ul.tagger>li>input {
+    margin-right: 10px;
+    height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 12px;
+}
+
+ul.tagger>li>a {
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+ul.tagger>li>a:hover {
+    color: red;
+}
+
+ul.tagger>li>a:last-child {
+    margin-right: 5px;
+}
+
+ul.tagger>li.appender {
+    border: none;
+    background-color: transparent;
+    padding-left: 0;
+}
+
+ul.tagger>li.expanded {
+    background-color: #B8E2F7;
+}

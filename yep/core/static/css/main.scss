@@ -1,0 +1,106 @@
+@import "mixins";
+
+/***************************** global ******************************/
+$text-color: #404040;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+}
+
+html, body {
+  font: 13px Arial;
+  color: $text-color;
+  background-color: #ebeef1;
+  //overflow: hidden;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 5px;
+}
+
+/***************************** end global ******************************/
+/***************************** header ******************************/
+
+#toolbar {
+  background: #26648f;
+  padding: 20px;
+  & input[type="text"] {
+    //border-radius: 0;
+    //box-shadow: none  ;
+  }
+}
+
+#content {
+  position: relative;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+/***************************** menu ******************************/
+
+/**********************business*******************************************/
+
+.paging-bar {
+  text-align: center;
+  font: bold normal 14px arial, sans-serif;
+  padding: 0.5em;
+  & a {
+    padding: 1em;
+  }
+
+  & a.selected {
+    text-decoration: none;
+    color: $text-color;
+    font-size: 120%;
+  }
+}
+
+//****************************************************************************
+
+#modal_window {
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  display: none;
+
+  & .body {
+    background: #fff;
+    width: 700px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  display: block;
+  background: #942a25;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.upload-progress {
+  height: 10px;
+  border-radius: 0;
+  margin: 0;
+  & .bar{
+    width:100%;
+  }
+}
+
+
+
+
+

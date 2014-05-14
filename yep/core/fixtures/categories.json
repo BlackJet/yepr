@@ -1,0 +1,350 @@
+[
+    {
+        "pk": 2,
+        "model": "core.category",
+        "fields": {
+            "rght": 34,
+            "name": "Техника",
+            "parent": null,
+            "level": 0,
+            "lft": 1,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "core.category",
+        "fields": {
+            "rght": 27,
+            "name": "Транспорт",
+            "parent": 2,
+            "level": 1,
+            "lft": 2,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "core.category",
+        "fields": {
+            "rght": 14,
+            "name": "Автомобильный транспорт",
+            "parent": 3,
+            "level": 2,
+            "lft": 3,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "core.category",
+        "fields": {
+            "rght": 5,
+            "name": "Автомобильный рынок",
+            "parent": 4,
+            "level": 3,
+            "lft": 4,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "core.category",
+        "fields": {
+            "rght": 7,
+            "name": "Автомойка",
+            "parent": 4,
+            "level": 3,
+            "lft": 6,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "core.category",
+        "fields": {
+            "rght": 9,
+            "name": "Прокат автомобилей",
+            "parent": 4,
+            "level": 3,
+            "lft": 8,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 8,
+        "model": "core.category",
+        "fields": {
+            "rght": 11,
+            "name": "Станция технического обслуживания",
+            "parent": 4,
+            "level": 3,
+            "lft": 10,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 9,
+        "model": "core.category",
+        "fields": {
+            "rght": 13,
+            "name": "Шиномонтаж",
+            "parent": 4,
+            "level": 3,
+            "lft": 12,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 10,
+        "model": "core.category",
+        "fields": {
+            "rght": 20,
+            "name": "Железнодорожный транспорт",
+            "parent": 3,
+            "level": 2,
+            "lft": 15,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 11,
+        "model": "core.category",
+        "fields": {
+            "rght": 17,
+            "name": "Железнодорожный вокзал",
+            "parent": 10,
+            "level": 3,
+            "lft": 16,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "core.category",
+        "fields": {
+            "rght": 19,
+            "name": "Железнодорожная станция",
+            "parent": 10,
+            "level": 3,
+            "lft": 18,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "core.category",
+        "fields": {
+            "rght": 26,
+            "name": "Авиация",
+            "parent": 3,
+            "level": 2,
+            "lft": 21,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "core.category",
+        "fields": {
+            "rght": 23,
+            "name": "Авиакомпания",
+            "parent": 13,
+            "level": 3,
+            "lft": 22,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 15,
+        "model": "core.category",
+        "fields": {
+            "rght": 25,
+            "name": "Аэропорт",
+            "parent": 13,
+            "level": 3,
+            "lft": 24,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 16,
+        "model": "core.category",
+        "fields": {
+            "rght": 33,
+            "name": "Компьютеры",
+            "parent": 2,
+            "level": 1,
+            "lft": 28,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 17,
+        "model": "core.category",
+        "fields": {
+            "rght": 30,
+            "name": "Ремонт компьютеров",
+            "parent": 16,
+            "level": 2,
+            "lft": 29,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 18,
+        "model": "core.category",
+        "fields": {
+            "rght": 32,
+            "name": "Компьютерный магазин",
+            "parent": 16,
+            "level": 2,
+            "lft": 31,
+            "tree_id": 1
+        }
+    },
+    {
+        "pk": 19,
+        "model": "core.category",
+        "fields": {
+            "rght": 16,
+            "name": "Развлечения",
+            "parent": null,
+            "level": 0,
+            "lft": 1,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 20,
+        "model": "core.category",
+        "fields": {
+            "rght": 9,
+            "name": "Культурно-развлекательные учреждения",
+            "parent": 19,
+            "level": 1,
+            "lft": 2,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 21,
+        "model": "core.category",
+        "fields": {
+            "rght": 4,
+            "name": "Зоопарк",
+            "parent": 20,
+            "level": 2,
+            "lft": 3,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 22,
+        "model": "core.category",
+        "fields": {
+            "rght": 6,
+            "name": "Музей",
+            "parent": 20,
+            "level": 2,
+            "lft": 5,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 24,
+        "model": "core.category",
+        "fields": {
+            "rght": 8,
+            "name": "Театр",
+            "parent": 20,
+            "level": 2,
+            "lft": 7,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 23,
+        "model": "core.category",
+        "fields": {
+            "rght": 11,
+            "name": "Цирк",
+            "parent": 19,
+            "level": 1,
+            "lft": 10,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 25,
+        "model": "core.category",
+        "fields": {
+            "rght": 13,
+            "name": "Кинотеатр",
+            "parent": 19,
+            "level": 1,
+            "lft": 12,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 26,
+        "model": "core.category",
+        "fields": {
+            "rght": 15,
+            "name": "Клуб",
+            "parent": 19,
+            "level": 1,
+            "lft": 14,
+            "tree_id": 2
+        }
+    },
+    {
+        "pk": 27,
+        "model": "core.category",
+        "fields": {
+            "rght": 8,
+            "name": "Недвижимость",
+            "parent": null,
+            "level": 0,
+            "lft": 1,
+            "tree_id": 3
+        }
+    },
+    {
+        "pk": 28,
+        "model": "core.category",
+        "fields": {
+            "rght": 7,
+            "name": "Жилая недвижимость",
+            "parent": 27,
+            "level": 1,
+            "lft": 2,
+            "tree_id": 3
+        }
+    },
+    {
+        "pk": 29,
+        "model": "core.category",
+        "fields": {
+            "rght": 4,
+            "name": "Управляющая компания",
+            "parent": 28,
+            "level": 2,
+            "lft": 3,
+            "tree_id": 3
+        }
+    },
+    {
+        "pk": 30,
+        "model": "core.category",
+        "fields": {
+            "rght": 6,
+            "name": "Ипотечное агентство",
+            "parent": 28,
+            "level": 2,
+            "lft": 5,
+            "tree_id": 3
+        }
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "pk": 1,
+        "model": "core.company",
+        "fields": {
+            "name": "Институт высоких технологий",
+            "createDate": "2013-06-03 23:00",
+            "categories": [21, 23]
+        }
+    },
+    {
+        "pk": 1,
+        "model": "core.address",
+        "fields": {
+            "company": 1,
+            "city": "Белгород",
+            "street": "1-й первомайский переулок",
+            "building": "1а",
+            "postIndex": "308001",
+            "website": "www.ivt.su",
+            "latitude": "50.608696",
+            "longitude": "36.602747"
+        }
+    }
+]

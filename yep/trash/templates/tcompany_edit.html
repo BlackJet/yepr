@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>op</title>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+                        $.ajax({
+                            url: "/api/company/1/",
+                            type: "put",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: JSON.stringify({
+                                name:"second",
+                                address_set:[
+                                    {
+                                        id:null,
+                                        city:"shit1"
+                                    }
+                                ]
+                            })
+                        });
+
+{#            $.ajax({#}
+{#                url: "/api/company/",#}
+{#                type: "post",#}
+{#                contentType: "application/json; charset=utf-8",#}
+{#                dataType: "json",#}
+{#                data: JSON.stringify({#}
+{#                    name: "second",#}
+{#                    address_set: [#}
+{#                        {#}
+{#                            id: null,#}
+{#                            company:null,#}
+{#                            city: "shit1"#}
+{#                        },#}
+{#                        {#}
+{#                            id: null,#}
+{#                            company:null,#}
+{#                            city: "shit2"#}
+{#                        }#}
+{#                    ],#}
+{#                    categories:[#}
+{#                        {#}
+{#                            id:2#}
+{#                        }#}
+{#                    ]#}
+{#                })#}
+{#            });#}
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

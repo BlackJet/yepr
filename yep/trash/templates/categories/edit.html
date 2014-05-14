@@ -1,0 +1,77 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tagger demo</title>
+    <link href="{%  static 'css/categories.css' %}" type="text/css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script src="http://underscorejs.org/underscore-min.js" type="text/javascript"></script>
+    <script src="http://backbonejs.org/backbone-min.js" type="text/javascript"></script>
+    <script src="{% static 'js/lib/backbone-relational.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/lib/backbone-tastypie.js' %}" type="text/javascript"></script>
+
+    <script src="{% static 'js/tagger.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/category.js' %}" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            window.Category = Backbone.Model.extend({
+                urlRoot: "/api/category",
+                idAttribute: "id"
+            });
+
+            window.Categories = Backbone.Collection.extend({
+                url: "/api/category",
+                model: window.Category
+            });
+
+            var categories = new Categories();
+
+            categories.fetch({
+                success: function (self, response, options) {
+                    new CategorySelector({
+                        renderTo: "#tagger",
+                        data: self.toJSON(),
+                        renameHandler: function (selector, category) {
+                            self.get(category.id).save({name: category.text});
+                        },
+                        addHandler: function (selector, category) {
+                            new Category({
+                                name: category.text,
+                                parent_id: category.parent.id
+                            }).save();
+                        },
+                        deleteHandler: function (selector, category) {
+                            self.get(category.id).destroy();
+                        }
+                    });
+
+                    var tagger = new CategorySelector({
+                        renderTo: "#forselect",
+                        renderSelectedTo: "selected",
+                        data: self.toJSON()
+                    });
+
+                    $("#getSelection").click(function(){
+                        console.log("Selected categories:", tagger.getSelectedItems());
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h4>Администрирование категорий</h4>
+    <div id="tagger"></div>
+
+    <br><br><br>
+
+    <h4>Назначение категорий</h4>
+    <div id="selected"></div>
+    <div id="forselect"></div>
+    <button id="getSelection">get selected categories</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="top-section" id="authForm">
+    <form action="#" class="b-auth">
+        {% csrf_token %}
+        <fieldset>
+            <p class="b-auth-field">
+                <input type="text" name="username" class="b-auth-input" placeholder="Логин"/>
+            </p>
+
+            <p class="b-auth-field">
+                <input type="text" name="password" class="b-auth-input" placeholder="Пароль"/>
+            </p>
+
+            <p class="b-auth-field">
+                <input type="submit" value="Войти" class="b-auth-submit"/>
+            </p>
+
+            <p>
+                <a class="smalltext" href="/register/">Регистрация</a> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                <a class="smalltext" href="/forgot/">Забыли пароль?</a>
+            </p>
+        </fieldset>
+    </form>
+</div>
